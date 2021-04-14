@@ -4,14 +4,9 @@ const sql = require("mySql");
 const { dcToken } = require('./config');
 const config = require('./config');
 
-
-
-
 const client = new Discord.Client();
 const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
 const prefix = "!";
-
-//fabian är en Horunge
 
 distube
     .on("playSong", (message, queue, song) => message.channel.send(
