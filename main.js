@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const DisTube = require("distube")
 const sql = require("mySql");
+const { dcToken } = require('./config');
 const config = require('./config');
 
 
@@ -8,6 +9,8 @@ const config = require('./config');
 
 const client = new Discord.Client();
 const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
+const prefix = "!";
+
 
 
 distube
@@ -39,13 +42,7 @@ distube
       });
   });
 
-
-  
-
-var dcID = 809463692176785454;
-const prefix = "!";
-
-client.login(dcToken);
+client.login(config.dcToken);
 client.once("ready", () => {
     
     
