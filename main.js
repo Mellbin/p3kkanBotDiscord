@@ -43,7 +43,6 @@ distube
   
 
 var dcID = 809463692176785454;
-var dcToken = "ODA5NDYzNjkyMTc2Nzg1NDU0.YCVdzw.0uy0kQWQ_YTorc1B8Ka9OeUDc78";
 const prefix = "!";
 
 client.login(dcToken);
