@@ -11,7 +11,7 @@ const client = new Discord.Client();
 const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
 const prefix = "!";
 
-//Horunge
+//fabian är en Horunge
 
 distube
     .on("playSong", (message, queue, song) => message.channel.send(
