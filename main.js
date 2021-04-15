@@ -10,7 +10,6 @@ const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true 
 const prefix = "!";
 
 
-
 const commandFiles = fs.readdirSync(`./commands`).filter(file => file.endsWith(`.js`));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -18,15 +17,12 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
 
+
 client.login(config.dcToken);
 client.once("ready", () => {
     console.log("pekkan is ready");  
 });
 
-
-function randomInt(low, high) { //funktion för val av banger
-  return Math.floor(Math.random() * (high - low) + low)
-}
 
 distube
     .on("playSong", (message, queue, song) => message.channel.send(
