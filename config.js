@@ -2,7 +2,7 @@
 
 const config  = {
   dcToken: "ToBeAdded",
-  dcID: 809463692176785454
+  dcID: "DCID"
 }
   
   module.exports = config;
