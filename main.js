@@ -1,18 +1,16 @@
-const Discord = require('discord.js');
 const sql = require("mySql");
-const { dcToken } = require('./config');
 const config = require('./config');
 const fs = require (`fs`);
-
+const client = require("./createClient");
 const DisTube = require("distube");
 const play = require('./commands/play');
 
-const client = new Discord.Client();
+
 const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
 const prefix = "!";
 
 
-client.commands = new Discord.Collection();
+
 const commandFiles = fs.readdirSync(`./commands`).filter(file => file.endsWith(`.js`));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -76,4 +74,4 @@ client.on (`message`, message =>{
   });
 
 module.exports = distube;
-module.exports = client;
+

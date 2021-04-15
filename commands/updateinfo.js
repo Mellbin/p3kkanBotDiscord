@@ -2,6 +2,7 @@ module.exports = {
     name: `updateinfo`,
     description: "uppdaterar dc",
     execute(message, args){
+        const client = require("../createClient");
         try{
             client.user.setActivity("Handlar järnrör på svarta marknaren");
             client.user.setUsername("Diktatorn's au pair")
