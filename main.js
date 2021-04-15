@@ -3,6 +3,7 @@ const DisTube = require("distube")
 const sql = require("mySql");
 const { dcToken } = require('./config');
 const config = require('./config');
+const fs = require("fs.js");
 
 const client = new Discord.Client();
 const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
