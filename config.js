@@ -1,8 +1,8 @@
 // @ts-check
 
 const config  = {
-  dcToken: "ToBeAdded",
-  dcID: 809463692176785454
+  dcToken: "Your dc token here",
+  dcID: "Your DC ID here"
 }
   
   module.exports = config;
